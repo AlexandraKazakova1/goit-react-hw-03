@@ -1,0 +1,25 @@
+.contact_container {
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.contact_container_text {
+  padding: 5px;
+}
+.contact_name {
+}
+.contact_number {
+}
+.contact_btn {
+  border-radius: 5px;
+  background-color: #f3eeee;
+  width: 80px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid grey;
+}
