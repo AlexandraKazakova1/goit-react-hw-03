@@ -1,25 +1,17 @@
-import { Field, Form, Formik } from "formik";
 import React from "react";
-
-const SearchBox = ({ searchTerm, onSearchChange }) => {
-  const handleChange = (event) => {
-    onSearchChange(event.target.value);
-  };
+import s from "./SearchBox.module.css";
+const SearchBox = ({ filter, onFilterChange }) => {
   return (
-    <div>
-      <Formik>
-        <Form>
-          <label>
-            <p>Find contacts by name</p>
-            <Field
-              type="text"
-              placeholder="Enter text to search"
-              value={searchTerm}
-              onChange={handleChange}
-            />
-          </label>
-        </Form>
-      </Formik>
+    <div className={s.wrapper}>
+      <label className={s.label}>
+        Find contacts by name
+        <input
+          className={s.input}
+          type="text"
+          onChange={(e) => onFilterChange(e.target.value)}
+          value={filter}
+        />
+      </label>
     </div>
   );
 };
